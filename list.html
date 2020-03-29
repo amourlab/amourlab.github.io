@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title font face="Times New Roman" size="4" color="black">Specialists</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/ba47187d1e.js" crossorigin="anonymous"></script>
+    <style>
+        header{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(doc.png);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo img{
+    float: left;
+    width: 100px;
+    height: auto;
+    position: fixed;
+    padding-top: 0;
+}
+
+.top{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.top h1{
+    color: black;
+    font-size: 300%;
+}
+.top p{
+    color: black;
+    font-size: 200%;
+}
+.button{
+    position: absolute;
+    top: 58%;
+    left: 36%;
+    transform: translate(-50%,-50%);
+    border: solid black 2px;
+    text-decoration: none;
+}
+
+
+.button a{
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #000;
+    font-size: 150%;
+    width: 100px;
+    margin-top: 5px;
+}
+.button a:hover{
+    font-weight: bolder;
+}
+
+.title{
+    text-align: center;
+    background-color: lightgray;
+    height: 450px;
+}
+.title h1{
+    padding-top: 40px;
+}
+.searchbox{
+    position: relative;;
+    left: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    transform: translate(-50%,-50%);
+    height: 40px;
+    width: 250px;
+    border-radius: 40px;
+    padding: 10px;
+    background-color:darkgray;
+}
+.searchbtn{
+    color: black;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    float: right;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchtext{
+    padding: 9px;
+    line-height: 10px;
+    border: none;
+    background: none;
+    outline: none;
+    color: black;
+    float: left;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 240px;
+}
+
+ul#doctor li{
+    padding: 20px 20px;
+    color: white;
+    margin-bottom: 15px;
+    background-color:lightgray;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.appbutton{
+    padding-top: 10px;
+    text-align: center;
+}
+.btn{
+    border: black solid 1px;
+    
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.btn{
+    text-decoration: none;
+    color: black;
+    background: white;
+    padding: 5px 30px;
+    border: 1px solid white;
+    transition: 0.3s ease;
+}
+.btn:hover{
+    background-color:maroon;
+    color: #000;
+    font-weight: bold;
+}
+#doctor{
+    background-color: lightgray;
+    height: 450px;
+    
+    
+}
+#doctor li h3{
+    font-size: 300%;
+    color: #000;
+}
+#doctor li p{
+    font-size: 200%;
+    color: #000;
+}
+
+.quote{
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 300%;
+}
+.container{
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    
+}
+button.accordion{
+    width: 100%;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 18px;
+    transition: background-color 0.2s linear;
+}
+
+button.accordion::after{
+    content: '\f13a';
+    font-family: "fontawesome";
+    font-size: 16px;
+    float: right;
+}
+
+button.accordion.is-open::after{
+    content: "\f139";
+}
+
+button.accordion:hover, button.accordion.is-open{
+    background-color: #ddd;
+}
+
+.content{
+    padding: 0 20px;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    font-size: larger;
+    background-color:white;
+    padding-left: 20px;
+}
+.why{
+    
+}
+.why h3{
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.why p{
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+.list{
+    border: black solid 2px;
+    border: transparent;
+    opacity: 70%;
+    border-radius: 8px;
+    width: 27%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 15px;
+    background-color: powderblue;
+    padding-left: 33px;
+    border-spacing: 3px 10px;
+    border-collapse: separate;
+    
+}
+.doctoricon img{
+    margin-top: 8px;
+}
+.box{
+    padding-bottom: 10px;
+    
+}
+.list h3{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.icon{
+    float: left;
+    size: 140px;
+}
+.appbutton{
+    transition: 0.2s;
+}
+
+.bttn{ cursor: pointer;
+    color: blue;
+}
+.bttn:hover{
+    font-weight: bold;
+    
+}
+.heading h1{
+    font-weight: bolder;
+    text-decoration: underline;
+    text-align: center;
+    padding: 40px;
+}
+.doctoricon{
+    
+    float: left;
+}
+footer{
+    text-align: center;
+    color: #000;
+    height: 100px;
+    
+    padding: 0;
+}
+footer h3{
+    text-align: center;
+    padding-bottom: 2px;
+    margin-bottom: 0;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+footer p{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+@media(max-width:800px){
+    header{
+        background-size: cover;
+    }
+    .top{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        
+    }
+    .top h1{
+        color: white;
+        padding-top: 80px;
+        padding-left: 80px;
+        text-align: center;
+        top: 30%;
+        left: 30%;
+        position: absolute;
+    }
+    .top p{
+        color: white;
+        text-align: center;
+        padding-left: 30px;
+    }
+    .searchbox{
+        top: 70%;
+        left: 50%;
+    }
+    
+    .list{
+        border: black solid 2px;
+        border-radius: 10px;
+        width: 80%;
+        float: left;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-left: 15px;
+        margin-right: 5px;
+        padding-left: 33px;
+        border-spacing: 3px 5px;
+        border-collapse: separate;
+        border: transparent;
+    }    
+    .list h3{
+        text-align: center;
+    }
+    .icon{
+        align-items: center;
+        size: 140px;
+    }
+    .doctoricon p{
+        padding-left: 2px;
+    }
+    .doctoricon h3{
+        padding-left: 0px;
+        text-align: left;
+    }
+    .doctoricon.bttn, .doctoricon a {
+        display: inline inline-block;
+    }
+    #doctor{
+        background-color: lightgray;
+        
+
+    }
+    .top h1{
+        text-align: center;
+        margin-right: 100px;
+        margin-bottom: 200px;
+        color: #000;
+        top: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0;
+    
+        
+    }
+    .button{
+        
+        position: absolute;
+        top: 58%;
+        left: 36%;
+        transform: translate(-50%,-50%);
+        border: solid black 2px;
+        text-decoration: none;
+        
+    }
+    .logo img{
+        top: 0;
+        left: 0;
+        float: left;
+        width: 100px;
+        height: auto;
+    }
+
+  
+
+}</style>
+    
+</head>
+<body style="background-image: url('doc.png'); height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;">
+    <div class="heading">
+        <h1 style="font-family:courier;font-size:100px;"><strong>SPECIALISTS<strong></h1>
+    </div>
+    
+    <div class="box">
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. R C CHAU PATNAIK </h3><p> MD PSM</p> 
+            Time : 10 AM - 12 PM, 6 PM - 8 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i></a> :<br> <div class="bttn">9437187118</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. PRIYANSHU PRADHAN </h3><p> MBBS</p> 
+                Time : 9 AM - 9 PM <br><br>
+                <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">828023440</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. SUNIL KUMAR KOTA </h3><p> MBBS, MD(MEDICINE), ENDOCRINOLOGY</p> 
+            Time : 2.30 PM - 8.30 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9437060012</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. SARAT CH. MOHANTY </h3><p> MBBS, MD- MEDICINE</p> 
+            Time : 10 AM - 1 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9861047485</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. J BHARATUDU </h3><p> MBBS, MD MEDICINE</p> 
+            Time : 10 AM - 1 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9437070911</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. D J J SWAMY </h3><p> MBBS, DCH</p> 
+            Time : 11 AM - 2 PM <br><br>
+            <a href="#"><i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9861146588</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. PRIYAJEET PANIGRAHY </h3><p> MBBS, DNB-ENT</p> 
+            Time : 11 AM - 2 PM, 4 PM - 7 PM <br><br>
+            <a href="#"><i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9778008008</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. BIBHUKESH PANIGRAHY </h3><p> BDS</p> 
+            Time : 2 PM - 4 PM <br><br>
+            <a href="#"><i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9937089370</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. PRAMOD AGRAWAL </h3><p> MBBS, MD MEDICINE</p> 
+            Time : 9 AM - 9 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9437216303</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. P C PATRA </h3><p> MBBS, MD MEDICINE</p> 
+            Time : 9 AM - 12 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i></a> :<br> <div class="bttn">9437166500</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. S MANMADHA RAO </h3><p> MBBS, MS-OPHTHALMOLOGY</p> 
+            Time : 9 AM - 9 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9861307524</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. K SASKAR RAO </h3><p> MBBS, MS-ORTHOPEDICS</p> 
+            Time : 9 AM - 9 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i></a> :<br> <div class="bttn">9337505511</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. N HIMANSU CHOUDHURY </h3><p> MBBS, MS-ENT</p> 
+            Time : 10 AM - 1 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9439618797</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. PRAVEEN SUBUDHI </h3><p> MBBS, MS-OPHTHALMOLOGY</p> 
+            Time : 9 AM - 1 PM <br><br>
+            <a href="#"><i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9938854810</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. PRADYUT RATH </h3><p> MBBS, MD-MEDICINE</p> 
+            Time : 10 AM - 6 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9861077473</div><br>
+            </div>
+            
+            
+        </div>
+        
+
+        
+
+        
+
+
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. AKSHYA KUMAR ROUT </h3><p> MBBS, MS. MCH PLATIC SURGERY</p> 
+            Time : 4 PM - 9 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9437003544</div><br>
+            </div>
+            
+            
+        </div>
+
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. B N R SUBUDHI </h3><p> MBBS, MS. OPTHALMOLOGY</p> 
+            Time : 10 AM - 1 PM <br><br>
+            <a href="#"><i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9437069633</div><br>
+            </div>
+            
+            
+        </div>
+
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. E VENKANTA KRISHNA </h3><p> MBBS, MD</p> 
+            Time : 10 AM - 2 PM, 6PM - 9 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9437323500</div><br>
+            </div>
+            
+            
+        </div>
+
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. PRATYUSH RAY </h3><p> MBBS, MS- OBS & GYENC</p> 
+            Time : 10 AM - 1 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9337234860</div><br>
+            </div>
+            
+            
+        </div>
+
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. P SAMINA </h3><p> MBBS, COSMETOLOGY</p> 
+            Time : 9 AM - 9 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9437476787</div><br>
+            </div>
+            
+            
+        </div>
+
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. SURYAKANTA JAYSINGH </h3><p> MBBS, MS-OBS & GYNEC</p> 
+            Time : 6 PM - 9 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i></a> :<br> <div class="bttn">7978754207</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. AMIT KUMAR MOHANTY </h3><p> MBBS</p> 
+            Time : 9 AM - 12 MIDNIGHT <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> :<br> <div class="bttn">9438604423</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. SAGAR PARIDA </h3><p> M.D PEDIATRICS</p> 
+            Time : 9 PM - 10 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i></a> : <div class="bttn">8917663234</div><br>
+            </div>
+            
+            
+        </div>
+        <div class="list">
+            <div class="doctoricon">
+                <img src="icon.jpg" width="100" height="100" alt="">
+                <h3>DR. MANOJ KUMAR ONKAR </h3><p>M.D MEDICINE</p> 
+            Time : 6 PM - 7 PM <br><br>
+            <a href="#"><i class="fas fa-phone"></i>,<i class="fab fa-whatsapp"></i></a> : <div class="bttn">8895957369</div>
+            </div>
+            
+            
+        </div>
+
+
+    
+    </div>
+
+</body>
+</html>

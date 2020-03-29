@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>COVID-19 | Welcome</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/ba47187d1e.js" crossorigin="anonymous"></script>
+
+<style>
+.form-popup {
+  display: none;
+  position:center;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+ 
+}
+
+/* Add styles to the form container */
+.form-container {
+  width: 300px;
+   height:100px;
+  padding: 10px;
+  background-color: blue;
+}
+.form-container .cancel {
+  background-color: red;
+}
+
+ *{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    
+    width: 50%;
+    margin:auto;
+    overflow: hidden;
+}
+
+
+
+
+
+#branding{
+    float: left;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    padding-top: 0;
+}
+#showcase {
+    height: auto;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./covid.jpg) no-repeat ;
+    text-align: center;
+    color: #000;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#showcase h1{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    top: 40%;
+    left: 50%;
+}
+#showcase p{
+    font-size: 30px;
+}
+#showcase .button{
+    margin-top: 20px;
+    color: black;
+    padding-bottom: 5PX;
+}
+#showcase .button a{
+    border: black solid 2px;
+    border: transparent;
+    text-align: center;
+    background-color: black;
+    padding: 10px ;
+    text-decoration: none;
+    font-size: 150%;
+    color: white;
+    
+    
+    
+}
+#showcase .button a:hover{
+    font-weight: bolder;
+    background-color: maroon;
+}
+#special .quote{
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 300%;
+}
+
+ul#doctor li{
+    padding: 20px 20px;
+    color: white;
+    margin-bottom: 15px;
+    
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.appbutton{
+    margin-top: 20px;
+    text-align: center;
+    transition: 0.2s;
+}
+.btn{
+    border: black solid 1px;
+    
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.btn{
+    text-decoration: none;
+    color: white;
+    background: green;
+    padding: 5px 30px;
+    border: 1px solid white;
+    transition: 0.3s ease;
+}
+.btn:hover{
+    background-color:maroon;
+    color: #000;
+    font-weight: bold;
+}
+#doctor{
+    text-align: center;
+    background-color: lightgray;
+    height: 450px;
+    
+    
+}
+#doctor li h3{
+    font-size: 300%;
+    color: #000;
+}
+#doctor li p{
+    font-size: 200%;
+    color: #000;
+}
+.title{
+    text-align: center;
+    background-color: lightgray;
+    height: 450px;
+}
+.title h1{
+    padding-top: 40px;
+}
+.searchbox{
+    position: relative;;
+    left: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    transform: translate(-50%,-50%);
+    height: 40px;
+    width: 250px;
+    border-radius: 40px;
+    padding: 10px;
+    background-color:darkgray;
+}
+.searchbtn{
+    color: black;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    float: right;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchtext{
+    padding: 9px;
+    line-height: 10px;
+    border: none;
+    background: none;
+    outline: none;
+    color: black;
+    float: left;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 240px;
+}
+
+
+.title{
+    text-align: center;
+    background-color: lightgray;
+    height: 450px;
+}
+.title h1{
+    padding-top: 40px;
+}
+.searchbox{
+    position: relative;;
+    left: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    transform: translate(-50%,-50%);
+    height: 40px;
+    width: 250px;
+    border-radius: 40px;
+    padding: 10px;
+    background-color:darkgray;
+}
+.searchbtn{
+    color: black;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    float: right;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchtext{
+    padding: 9px;
+    line-height: 10px;
+    border: none;
+    background: none;
+    outline: none;
+    color: black;
+    float: left;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 240px;
+}
+
+
+
+button.accordion{
+    width: 100%;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 18px;
+    transition: background-color 0.2s linear;
+}
+
+button.accordion::after{
+    content: '\f13a';
+    font-family: "fontawesome";
+    font-size: 16px;
+    float: right;
+}
+
+button.accordion.is-open::after{
+    content: "\f139";
+}
+
+button.accordion:hover, button.accordion.is-open{
+    background-color: #ddd;
+}
+
+.content{
+    padding: 0 20px;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    font-size: larger;
+    background-color:white;
+    padding-left: 20px;
+    margin: 10px;
+}
+.content p{
+    margin-top: 10px;
+}
+.container h1{
+    margin-bottom: 20px;
+}
+.why h3{
+    margin-top: 15px;
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.why p{
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+.list{
+    border: black solid 2px;
+    border-radius: 8px;
+    width: 30%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 33px;
+    border-spacing: 3px 10px;
+    border-collapse: separate;
+    
+}
+.box{
+    padding-bottom: 10px;
+    
+}
+.list h3{
+    color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.icon{
+    float: left;
+    size: 140px;
+}
+.appbutton{
+    transition: 0.2s;
+}
+
+.bttn{ cursor: pointer;
+    color: blue;
+}
+.bttn:hover{
+    font-weight: bold;
+    
+}
+.heading h1{
+    font-weight: bolder;
+    text-decoration: underline;
+    text-align: center;
+    padding: 40px;
+}
+.doctoricon{
+    
+    float: left;
+}
+footer{
+    text-align: center;
+    color: #000;
+    height: 100px;
+    
+    padding: 0;
+}
+footer h3{
+    text-align: center;
+    padding-bottom: 2px;
+    margin-bottom: 0;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+footer p{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+@media(max-width:800px){
+    header{
+        background-size: cover;
+    }
+    .top{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        
+    }
+    .top h1{
+        color: white;
+        padding-top: 80px;
+        padding-left: 80px;
+        text-align: center;
+        top: 30%;
+        left: 30%;
+        position: absolute;
+    }
+    .top p{
+        color: white;
+        text-align: center;
+        padding-left: 30px;
+    }
+    .searchbox{
+        top: 70%;
+        left: 50%;
+    }
+    
+    .list{
+        border: black solid 2px;
+        border-radius: 10px;
+        width: 80%;
+        float: left;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-left: 15px;
+        margin-right: 5px;
+        padding-left: 33px;
+        border-spacing: 3px 10px;
+        border-collapse: separate;
+    }    
+    .list h3{
+        text-align: center;
+    }
+    .icon{
+        align-items: center;
+        size: 140px;
+    }
+    .doctoricon p{
+        padding-left: 2px;
+    }
+    .doctoricon h3{
+        padding-left: 0px;
+        text-align: left;
+    }
+    .doctoricon.bttn, .doctoricon a {
+        display: inline inline-block;
+    }
+    #doctor{
+        background-color: lightgray;
+        
+
+    }
+    .top h1{
+        text-align: center;
+        margin-right: 100px;
+        margin-bottom: 200px;
+        color: #000;
+        top: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0;
+    
+        
+    }
+    
+    .divvv {
+  background-color: #4CAF50;
+opacity: 0.1;
+}
+
+
+    
+
+}</style>
+
+
+
+
+</head>
+<body style="background-color:white">
+    <header>
+        <div class="container">
+            <div id="branding">
+                <img src="amour.png" alt="" width="70" height="50">
+
+            </div>
+            
+        </div>
+    </header>
+    <section id="showcase">
+        <div class="container">
+            <h1> COVID-19  </h1><br>
+            <p><h2><strong>DIGITAL SCREENING LIVE<strong></h2></p>
+            <div class="button"><a href="#">SCREEN NOW</a></div>
+
+        </div>
+    </section>
+    <br><br><hr><br><br>
+    <section id="special">
+       <div class="a">
+            <div class="quote">
+		<img src="tag.jpg" width="100%" height="70px">
+                
+            </div>
+        </div>
+    </section>
+    <br><br><hr>
+    <div class="a">
+    <ul style="background-image: url('docc.jpg');background-repeat: no-repeat; ">
+
+                    <li>
+                        <br>
+			<center>
+                        <h1>Your health matters to us.</h1><br>
+                        <br>
+                        <h2>If you have more questions! Reach us.</h2><br>
+                        <div class="appbutton">
+                            <a href="list.html" class="btn">VIEW ALL SPECIALISTS</a> <br><br><br>                  
+                        </div>
+			</center>
+                    </li>
+        </ul>
+	
+    
+</div>
+    <hr><br><br>
+    <div class="a">
+        <ul style="background-image: url('medi.jpg'); height:70%; background-repeat: no-repeat;  background-size: auto;">
+                    <li>
+                        <center>
+                        <br>
+                        <h1>Medicine to order?</h1>
+                        <br>
+                        <h2>For doorstep delivery! Reach us.</h2><br>
+                        <div class="appbutton">
+                            <a href="med.html" class="btn">VIEW MEDICINE STORES</a>                   
+                        </div></center>
+                    </li>
+        </ul>
+    </div>
+
+
+    <br><br><hr><br><br>
+    <div style="background-color:'grey';">
+<div style="background-image: url('odilogo.jpg'); background-repeat: no-repeat;width:100%;">
+        <center>    <h1>Q u a r a n T i m e</h1>
+            <h1 style="color:red;">ODISHA COVID-19 <br> QUARANTINE TRACKER</h1>
+            <br><br>
+            <div class="appbutton">
+                <button class="btn" onclick="openForm()"><strong>VIEW TRACES</strong></button> 
+		       <div class="form-popup" id="myForm">
+			<center>
+    			<h2>TOTAL COVID CASES IN ODISHA</h2>
+
+    			<label><b> 3 till now from bhubaneswar.</b></label>
+				<p><button type="button" class="btn cancel" onclick="closeForm()">Close</button></p></center>
+					</div>
+            </div>
+            </center>
+        </div>
+    </div>
+    <br><br>
+
+    <br><br><hr><br><br>
+    <div class="container">
+        <h1>Basic protective measures against the new coronavirus:</h1>
+        <button class="accordion">Wash your hand frequently</button>
+        <div class="content">
+            <p>Wash and clean your hands regularly with an alcohol based rub or clean them with soap and water.</p>
+            <div class="why">
+                <h3>Why?</h3>
+                <p>Using alcohol based hand rub or washing your hands with soap and water kills all the viruses that may be on your hands.</p>
+            </div>
+        </div>
+
+        <button class="accordion">Maintain social distancing</button>
+        <div class="content">
+            <p>Maintain atleast 1 meter(3 feet) distance between yourself and anyone who is coughing or sneezing.</p>
+            <div class="why">
+                <h3>Why?</h3>
+                <p>When someone coughs or sneezes ,they spray small liquid droplets from their nose or mouth which may contain virus.If you are too close you can breathe in the droplets,including the COVID-19 virus,if the person coughing has the disease.</p>
+            </div>
+        </div>
+
+        <button class="accordion">Avoid touching eyes,nose and mouth</button>
+        <div class="content">
+            <p></p>
+            <div class="why">
+                <h3>Why?</h3>
+                <p>Our hands touch many surfaces and can pick up viruses.Once contaminated,hands can then transfer the virus to your eyes,nose or mouth.From there the virus can enter your body and make you sick.</p>
+            </div>
+        </div>
+
+        <button class="accordion">Practice respiratory hygiene</button>
+        <div class="content">
+            <p>Make sure you and the people around you follow good respiratory hygiene.This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze an dispose the use tissue immediately</p>
+            <div class="why">
+                <h3>Why?</h3>
+                <p>Droplets spread virus.By following good respiratory hygiene, you protect the people around you from viruses such as cold,flu and COVID-19.</p>
+            </div>
+        </div>
+
+        <button class="accordion">If you have fever,cough and face difficulty in breathing, seek medical care as easrly as possible</button>
+        <div class="content">
+            <p>Stay home if you feel unwell. If you have fever,cough and face difficulty in breathing,seek medical attention and call in advance. Followthe directions of your local health authority.</p>
+            <div class="why">
+                <h3>Why?</h3>
+                <p>National and local authorities will have the most up to date information on the situation in your area. Calling in advance will allow your healthcare provider to quickly direct you to the right health facility.This will also protect you and help prevent spread of viruses and other information</p>
+            </div>
+        </div>
+
+        <button class="accordion">Stay informed and follow advice given by your healthcare provider</button>
+        <div class="content">
+            <p>Stay informed on the latest developments about COVID-19.Follow advice given by your healthcare provider, your national and local public health authority or your employer on how to protect youself and others from COVID-19.</p>
+            <div class="why">
+                <h3>Why?</h3>
+                <p>National and local authorities will have the most up to date information on whether COVID-19 is spreading in your area or not.They are best placed to advice you on what people in your area should be doing to protect themselves</p>
+         
+            </div>
+        </div>
+    </div>
+    <footer>
+
+        <br><hr><br><br>
+        <h3>Powered by: Amour Lab Private Limited</h3><br>
+        <p>A Startup from Startup Odisha</p><br>
+        <p>Contact us : +919658610011 </p><br><br><br><br>
+    </footer>
+
+        
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
