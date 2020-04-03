@@ -1,31 +1,12 @@
-*{
-    margin: 0;
-    padding: 0;
+hr {
+    background-color: #000;
 }
 
-.container{
-    
-    width: 80%;
-    margin:auto;
-    overflow: hidden;
-}
-
-
-
-
-
-#branding{
-    float: left;
-    margin: 0;
+#showcase {
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
-    position: fixed;
-    padding-top: 0;
-}
-#showcase {
-    min-height: 800px;
+    width: 100%;
+    height: 90vh;
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../covid.jpg) no-repeat ;
     text-align: center;
     color: #000;
@@ -35,143 +16,251 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
 }
 
-#showcase h1{
-    margin-top: 100px;
-    margin-bottom: 10px;
-    font-size: 60px;
-    top: 60%;
-    left: 50%;
-}
-#showcase p{
-    font-size: 30px;
-}
-#showcase .button{
-    margin-top: 20px;
-    color: black;
-}
-#showcase .button a{
-    border: black solid 2px;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 150%;
-    color: #000;
+#showcase > .container {
     text-align: center;
-    
-    
-}
-#showcase .button a:hover{
-    font-weight: bolder;
-    
-}
-#special .quote{
-    text-align: center;
-    font-weight: bolder;
-    letter-spacing: 3px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 300%;
-}
-
-ul#doctor li{
-    padding: 20px 20px;
-    color: white;
-    margin-bottom: 15px;
-    
-    list-style: none;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    
-}
-.appbutton{
-    margin-top: 20px;
-    text-align: center;
-    transition: 0.2s;
-}
-.btn{
-    border: black solid 1px;
-    
-    text-align: center;
-    padding: 10px 10px;
-    text-decoration: none;
-}
-
-.btn{
-    text-decoration: none;
-    color: black;
-    background: white;
-    padding: 5px 30px;
-    border: 1px solid white;
-    transition: 0.3s ease;
-}
-.btn:hover{
-    background-color:maroon;
-    color: #000;
-    font-weight: bold;
-}
-#doctor{
-    text-align: center;
-    background-color: lightgray;
-    height: 450px;
-    
-    
-}
-#doctor li h3{
-    font-size: 300%;
-    color: #000;
-}
-#doctor li p{
-    font-size: 200%;
-    color: #000;
-}
-.title{
-    text-align: center;
-    background-color: lightgray;
-    height: 450px;
-}
-.title h1{
-    padding-top: 40px;
-}
-.searchbox{
-    position: relative;;
-    left: 50%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-    transform: translate(-50%,-50%);
-    height: 40px;
-    width: 250px;
-    border-radius: 40px;
-    padding: 10px;
-    background-color:darkgray;
-}
-.searchbtn{
-    color: black;
     margin: auto;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    float: right;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
+}
+
+.button {
+    margin-top: 40px;
+    color: black;
+}
+
+.button > a {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 200%;
+    text-align: center;
+    box-shadow: 0px 0px 5px 2px white;
+    border-radius: 10px;
+}
+
+.button > a:hover {
+    transition: 0.2s;
+    padding: 7px 12px;
+}
+
+.button > a:active {
+    transition: 0s;
+    padding: 4px 8px;
+}
+
+#tracker {
+    text-align: center;
     align-items: center;
 }
 
-.searchtext{
-    padding: 9px;
-    line-height: 10px;
-    border: none;
-    background: none;
-    outline: none;
-    color: black;
+#tracker > div {
+    display: block;
+    text-align: center;
+    margin: auto;
+    height: 40px;
+}
+
+#tracker > div > h2 {
     float: left;
-    font-size: 16px;
-    transition: 0.3s;
-    width: 240px;
+    width: 25%;
+}
+
+@media only screen and (max-width: 650px) {
+    .word > h2 {
+        font-size: 1.4em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .word > h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .word > h2 {
+        font-size: 1.1em;
+    }
+}
+
+#odishahelpline {
+    width: 100%;
+    text-align: center;
+}
+
+#odishahelpline > button {
+    background: royalblue;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 30px;
+    outline: none;
+    border: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    #odishahelpline > button {
+        padding: 10px 10px;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #odishahelpline > button {
+        padding: 10px 5px;
+        font-size: 17px;
+    }
+}
+
+#moredetails {
+    padding:0px 300px;
+}
+
+@media only screen and (max-width: 1300px) {
+    #moredetails {
+        padding:0px 100px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #moredetails {
+        padding:0px 50px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #moredetails {
+        padding:0px 30px;
+    }
+}
+
+#specialist {
+    width: 100%;
+    text-align: center;
+}
+
+#specialistpage > button {
+    background: rgb(255,70,70);
+    padding: 10px 11px;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    outline: none;
+    border: 0;
+}
+
+#specialistpage > button:hover {
+    background: rgb(235,50,50);
+}
+
+
+#medicinestores > button {
+    background: rgb(162, 235, 138);
+    padding: 10px 4px;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 22px;
+    outline: none;
+    border: 0;
+}
+
+#medicinestores > button:hover {
+    background: rgb(142, 215, 118);
+}
+
+
+#precautions {
+    width: 100%;
+    text-align: center;
+}
+
+
+#panic > p {
+    padding: 10px;
+    background: rgb(227,226,243);
+    font-size: 30px;
+    color: rgb(60,54,173);
+}
+
+@media only screen and (max-width: 450px) {
+    #panic > p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    #panic > p {
+        font-size: 18px;
+    }
+}
+
+#points {
+    text-align: left;
+    padding: 5px 50px;
+}
+
+.accordion {
+    font-size: 23px;
+    padding: 5px 5px;
+    background-color:  rgb(183, 214, 255);
+}
+
+.accordion:focus {
+    outline: none;
+}
+
+.panel {
+    background-color: rgb(203,234,275);
+}
+
+.panel > p {
+    font-size: 20px;
+    padding: 5px 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    #points {
+        padding: 5px 10px;
+    }
+    .accordion {
+        font-size: 20px;
+    }
+    .panel > p {
+        font-size: 18px;
+        padding: 5px 2px;
+    }
+}
+
+.twitter-amour {
+    width: 90%;
+    margin: auto;
+    padding: 2px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    color: rgb(105,105,105);
+}
+
+@media only screen and (max-width: 400px) {
+    footer > h5 {
+        font-size: 15px;
+    }
+}
+
+footer > h4 > span {
+    background-color: royalblue;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
